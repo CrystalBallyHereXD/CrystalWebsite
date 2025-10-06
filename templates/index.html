@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Crystal Website</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="bg"></div>
+    <div class="container">
+        <h1>Crystal Website 💙</h1>
+        <div class="buttons">
+            {% for btn in buttons %}
+                <a href="{{ btn.link }}" class="btn">{{ btn.title }}</a>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
